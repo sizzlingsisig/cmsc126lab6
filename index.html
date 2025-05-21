@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leeds United Team Roster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo-placeholder.png" alt="Leeds United Logo" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='inline-flex';">
+        <div id="fallback-logo" class="logo-placeholder" style="display: none;">Logo</div>
+    </div>
+    <h1>Leeds United Team Roster</h1>
+</header>
+
+<div class="container">
+    <h2>Add New Player</h2>
+    <form>
+        <div>
+            <label>Name:</label>
+            <input type="text" name="name" required>
+        </div>
+        <div>
+            <label>Position:</label>
+            <select name="position" required>
+                <option value="">Select</option>
+                <option>Goalkeeper</option>
+                <option>Defender</option>
+                <option>Midfielder</option>
+                <option>Forward</option>
+            </select>
+        </div>
+        <div>
+            <label>Jersey Number:</label>
+            <input type="number" name="jersey_number" required>
+        </div>
+        <div>
+            <label>Nationality:</label>
+            <input type="text" name="nationality" required>
+        </div>
+        <div>
+            <label>Birthdate:</label>
+            <input type="date" name="birthdate" required>
+        </div>
+        <button type="submit">Add Player</button>
+    </form>
+
+    <h2>Current Squad</h2>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Jersey</th>
+            <th>Nationality</th>
+            <th>Birthdate</th>
+            <th>Actions</th>
+        </tr>
+
+        <!-- Add more sample player rows as needed -->
+    </table>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

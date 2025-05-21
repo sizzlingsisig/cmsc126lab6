@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Player Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      max-width: 600px;
+    }
+    form {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 30px;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 4px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Player Management</h1>
+
+  <!-- Add Player -->
+  <form id="addForm" action="add_player.php" method="POST">
+    <h3>Add Player</h3>
+    <label>
+      Name:
+      <input type="text" name="name" required />
+    </label>
+    <label>
+      Position:
+      <input type="text" name="position" required />
+    </label>
+    <label>
+      Jersey Number:
+      <input type="number" name="jersey_number" min="1" required />
+    </label>
+    <label>
+      Nationality:
+      <input type="text" name="nationality" required />
+    </label>
+    <label>
+      Birthdate:
+      <input type="date" name="birthdate" required />
+    </label>
+    <button type="submit">Add Player</button>
+  </form>
+
+  <!-- Edit Player -->
+  <form id="editForm" action="edit_player.php" method="POST">
+    <h3>Edit Player</h3>
+    <label>
+      Player ID:
+      <input type="number" name="id" min="1" required />
+    </label>
+    <label>
+      Name:
+      <input type="text" name="name" required />
+    </label>
+    <label>
+      Position:
+      <input type="text" name="position" required />
+    </label>
+    <label>
+      Jersey Number:
+      <input type="number" name="jersey_number" min="1" required />
+    </label>
+    <label>
+      Nationality:
+      <input type="text" name="nationality" required />
+    </label>
+    <label>
+      Birthdate:
+      <input type="date" name="birthdate" required />
+    </label>
+    <button type="submit">Edit Player</button>
+  </form>
+
+  <!-- Delete Player -->
+  <form id="deleteForm" action="delete_player.php" method="POST">
+    <h3>Delete Player</h3>
+    <label>
+      Player ID:
+      <input type="number" name="id" min="1" required />
+    </label>
+    <button type="submit">Delete Player</button>
+  </form>
+
+</body>
+</html>
